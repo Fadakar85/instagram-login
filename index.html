@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram Login</title>
+  <link href="https://fonts.cdnfonts.com/css/billabong" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 350px;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .logo {
+      font-family: 'Billabong', cursive;
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #262626;
+      border: 1px solid #444;
+      border-radius: 4px;
+      color: #ccc;
+    }
+
+    .password-container {
+      position: relative;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-70%);
+      background: none;
+      border: none;
+      color: #aaa;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .login-button {
+      width: 100%;
+      padding: 10px;
+      background-color: #3797f0;
+      border: none;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 6px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .link {
+      margin-top: 12px;
+      font-size: 12px;
+      color: #a1a1a1;
+    }
+
+    .link a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .signup {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #a1a1a1;
+    }
+
+    .signup a {
+      color: #0095f6;
+      text-decoration: none;
+    }
+
+    .get-the-app {
+      margin-top: 20px;
+    }
+
+    .store-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .store-buttons a img {
+      height: 40px;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 11px;
+      text-align: center;
+      color: #777;
+    }
+
+    footer a {
+      color: #777;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    footer .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="logo">Instagram</div>
+    <input class="input-field" type="text" placeholder="Phone number, username, or email">
+    <div class="password-container">
+      <input class="input-field" type="password" placeholder="Password" id="password">
+      <button type="button" class="toggle-password" onclick="togglePassword()">Show</button>
+    </div>
+    <button class="login-button">Log in</button>
+    <div class="link">
+      <a href="#">Forgot password?</a>
+    </div>
+    <div class="signup">
+      Don't have an account? <a href="#">Sign up</a>
+    </div>
+    <div class="get-the-app">
+      <p>Get the app.</p>
+      <div class="store-buttons">
+        <a href="https://play.google.com/store/apps/details?id=com.instagram.android" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/512px-Google_Play_Store_badge_EN.svg.png" alt="Google Play">
+        </a>
+        <a href="https://apps.microsoft.com/store/detail/instagram/9NBLGGH5L9XT" target="_blank">
+          <img src="https://developer.microsoft.com/en-us/store/badges/images/English_get-it-from-MS.png" alt="Microsoft Store">
+        </a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="links">
+      <a href="#">Meta</a>
+      <a href="#">About</a>
+      <a href="#">Blog</a>
+      <a href="#">Jobs</a>
+      <a href="#">Help</a>
+      <a href="#">API</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Locations</a>
+      <a href="#">Instagram Lite</a>
+      <a href="#">Threads</a>
+      <a href="#">Contact Uploading</a>
+      <a href="#">Meta Verified</a>
+    </div>
+    <p style="margin-top: 15px;">English ▾</p>
+    <p style="margin-top: 5px;">&copy; 2025 Instagram from Meta</p>
+  </footer>
+  <script>
+    function togglePassword() {
+      const passwordField = document.getElementById('password');
+      const toggleButton = document.querySelector('.toggle-password');
+      const isPassword = passwordField.type === 'password';
+      passwordField.type = isPassword ? 'text' : 'password';
+      toggleButton.textContent = isPassword ? 'Hide' : 'Show';
+    }
+  </script>
+</body>
+</html>
